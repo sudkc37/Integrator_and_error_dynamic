@@ -63,47 +63,8 @@ plt.xlim([7.5,8])
 plt.ylim([-1,2])
 plt.show()
 
-"""#Discret Rieman integrals and Trapezoid Rules"""
-
-a = 0  #starting integral point
-b = 10 #ending integral point
-dxf = 0.01
-xf = np.linspace(a,b, int(b/dxf))
-yf = np.sin(xf)
-plt.plot(xf, yf,'k')
 
 
-dxc = 0.5
-xc = np.linspace(a,b, int(b/dxc))
-edges = np.linspace(a,b, int(b/dxc)+1, endpoint=True)
-yc = np.sin(xc)
-plt.stairs(yc, edges, color='g')
-plt.grid(True)
-plt.show()
-
-n = len(xc)
-
-#left sided rectangle rule
-left_sided_rectangle = 0
-for i in range(n-1):
-  left_sided_rectangle = left_sided_rectangle + yc[i]*dxc
-print(left_sided_rectangle)
-
-#right sided rectangle rule
-right_sided_rectangle = 0
-for i in range(n-1):
-  right_sided_rectangle = right_sided_rectangle + yc[i+1]*dxc
-print(right_sided_rectangle)
-
-#trapezoid rule
-trapezoid_rule = 0
-for i in range(n-1):
-  trapezoid_rule = trapezoid_rule +  (dxc/2) * (yc[i]+yc[i+1])
-print(trapezoid_rule)
-
-#Built in alternative trapezoid_rule is more accurate
-trapezoid_rule = np.trapz(yf,xf)
-trapezoid_rule
 
 
 
