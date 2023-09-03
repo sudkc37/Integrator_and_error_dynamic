@@ -1,7 +1,7 @@
 # Integrator_and_error_dynamics
 
 Assumption:
-We have a function 'sin(t)**3 + (exp(t)**-6) * 2' that mimics the stock return in short intervals of time:
+We have a function 'sin(t)**3 + (exp(t)**-6) * 2' that mimics the real-time price in short intervals of time:
 
 #Error Analysis of Numerical Differentiation on Function.
 -- Using the first Principle df/dx ~ (f(T + deltaT) - f(T))/ delta T. Forward, Backward, and central differences have been derived.
